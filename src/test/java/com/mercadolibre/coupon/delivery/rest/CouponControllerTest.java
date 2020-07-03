@@ -80,7 +80,7 @@ class CouponControllerTest {
         try {
             couponController.getItemsForCoupon(request);
             verify(couponService, times(1)).calculateItemsForCoupon(itemsSet, amount);
-        } catch (GeneralException e) {
+        } catch (Exception e) {
             fail("exception during test");
         }
     }

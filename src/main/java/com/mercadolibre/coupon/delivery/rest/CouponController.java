@@ -33,7 +33,7 @@ public class CouponController {
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ItemsCalculated getItemsForCoupon(@RequestBody GetItemsForCouponRequest request) throws GeneralException {
+    public ItemsCalculated getItemsForCoupon(@RequestBody GetItemsForCouponRequest request) throws Exception {
         try {
             if (request==null || request.getAmount()==null ||
                     NumberUtil.getNumberOfDecimalOfFloat(request.getAmount()) > 2
