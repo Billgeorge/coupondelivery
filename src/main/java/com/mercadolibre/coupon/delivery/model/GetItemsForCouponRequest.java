@@ -14,6 +14,9 @@ public class GetItemsForCouponRequest {
         this.amount=amount;
         this.itemIds=itemIds;
     }
+    public GetItemsForCouponRequest(){
+
+    }
 
     public Set<String> getItemIds() {
         return itemIds;
